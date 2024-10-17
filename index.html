@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiabsolut Software</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e2e2e;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000;
+            padding: 20px;
+        }
+        .header h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .edition {
+            background-color: #e50000;
+            color: #fff;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .feature {
+            width: 50%;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+        }
+        .pay-section {
+            margin: 30px 0;
+        }
+        #downloadLink {
+            display: none; /* Inicialmente oculto */
+            background-color: #0070ba;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Antiabsolut Software</h1>
+    </div>
+
+    <div class="edition">Standard Edition</div>
+
+    <div class="features">
+        <div class="feature">
+          <h3>DESBLOQUEA TU PC PORTATIL Y DE ESCRITORIO EN UN SOLO CLICK&nbsp; &nbsp; &nbsp;</h3>
+            <p>UTILIDAD DISPONIBLE DE UN SOLO USO&nbsp;COMPATIBLE CON WINDOWS 10 Y 11</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+    <div class="pay-section">
+        <h2>Paga y Descarga</h2>
+
+<div><img src="imagenes/pngwing.com.png" alt="" width="351" align="right"/></div>
+        
+<!-- Botón de PayPal -->
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA6N_Uga08IjAJB2TE_2rRs1pOKz5LBePjvr4EZPS6-UDviV_xXUQs4bS7pDMP6SX1AenlosSQFDSs-Lc&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+        <div id="paypal-container-SS4VEUVA34HGJ"></div>
+        <script>
+            paypal.HostedButtons({
+                hostedButtonId: "SS4VEUVA34HGJ",
+                onApprove: function(data) {
+                    // Esta función se ejecuta cuando el pago es aprobado
+                    document.getElementById("downloadLink").style.display = "inline-block"; // Mostrar el enlace de descarga
+                    alert("Pago confirmado. Ahora puedes descargar el software.");
+                },
+                onCancel: function(data) {
+                    // Función opcional si el usuario cancela el pago
+                    alert("El pago fue cancelado.");
+                },
+                onError: function(err) {
+                    // Manejar errores
+                    console.error(err);
+                    alert("Se produjo un error durante el proceso de pago.");
+                }
+            }).render("#paypal-container-SS4VEUVA34HGJ");
+        </script>
+</div>
+
+    <!-- Enlace de descarga oculto -->
+    <a id="downloadLink" href="https://www.mediafire.com/file/30ug7yfxmp7nqns/Antiabsolut_software.exe/file" target="_blank" style="display: none;">Descargar Antiabsolut Software</a>
+
+    <footer>
+        <p>&copy; 2024 Antiabsolut Software. Todos los derechos reservados.Email:yimmybird85@gmail.com o wattsap : +573005048853</p>
+    </footer>
+
+</body>
+</html>
